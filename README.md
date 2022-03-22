@@ -29,7 +29,7 @@ This step will save your credentials in the `~/.npmrc` file with a line like thi
 //yourserver.com/npm/:_authToken=<REDACTED_TOKEN>
 ```
 
-You can use the <REDACTED TOKEN> in a CI pipeline to automate the publishing of packages into your Verdaccio instance.
+You can use the `<REDACTED TOKEN>` in a CI pipeline to automate the publishing of packages into your Verdaccio instance.
 
 
 And then just publish your packages there:
