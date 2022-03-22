@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  verdaccio:
+    restart: always
+    image: verdaccio/verdaccio:5
+    container_name: "verdaccio"
+    networks:
+      - node-network
+    environment:
+      - VERDACCIO_PORT=4873
+      - VERDACCIO_PUBLIC_URL=https://your-server-url.com
+    ports:
+      - "8080:4873"
+    volumes:
+      - "verdaccio-storage:/verdaccio/storage"
+      - "./conf:/verdaccio/conf"
+networks:
+  node-network:
+    driver: bridge
+
+
+volumes:
+  verdaccio-storage:
